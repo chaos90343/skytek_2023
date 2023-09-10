@@ -40,7 +40,7 @@ const filteredTodos = computed(() => {
     <ul>
       <li v-for="todo in filteredTodos" :key="todo.id">
         <input type="checkbox" v-model="todo.done">
-        <span :class="{ 'text-with-underline': todo.done }">{{ todo.text + todo.id }}</span>
+        <span :class="{ 'text-with-underline': todo.done }">{{ todo.text }} id:{{todo.id}}</span>
         <button @click="removeTodo(todo)">X</button>
       </li>
     </ul>
